@@ -1,0 +1,171 @@
+body{
+	margin: 200px 500px ;
+}
+
+/******  heart animation  *******/
+
+.heart .heart-img{
+	width: 200px;
+	height: 200px;
+	animation: pump 3s ease-in-out forwards;
+}
+@keyframes pump{
+	10%{ transform: scale(1); }
+	20%{ transform: scale(1.4);	}
+	30%{ transform: scale(1.2);	}
+	40%{ transform: scale(1.4);	}
+	55%{ transform: scale(1); }
+	70%{ transform: scale(1.4);	}
+	80%{ transform: scale(1.2);	}
+	90%{ transform: scale(1.4);	}
+	100%{ transform: scale(1); }		
+}
+/******  End heart animation  *******/
+/******  bounce animation  *******/
+
+.bounce{
+	width: 100%;
+	
+	text-align: center;	
+	
+}
+
+.bounce p{
+	color: #00CED2;
+	font-size: 80px;
+	animation: bounce 2s ease-in-out forwards;
+}
+
+@keyframes bounce {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}	
+	50% {
+		opacity: 1;
+		transform: scale(1.4);
+	}	
+	100% { transform: scale(1); }
+}
+/****** End  bounce animation  *******/
+
+/******  clock animation  *******/
+.clock{
+	position: relative;
+	width: 200%;
+	height: 640px;
+	}
+
+.clock .watch{
+	position: absolute;	
+	width: 100%;
+	height: 100%;
+}
+.clock .hand{
+	position: absolute;
+	top: 50%;
+	left: 50%;		
+	width: 30%;
+	transform-origin: 12px 12px;
+	animation: rotate 3s linear infinite ;
+}
+.clock:hover .hand{
+	animation-play-state: paused;
+}
+@keyframes rotate {
+	100% { transform: rotate(360deg); }
+}
+/******  End clock animation  *******/
+/******  Ball animation  *******/
+
+.popBall{
+	margin: 0;
+	margin-left: 35% ;
+	position: relative;
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+}
+.popBall .fas{
+	position: absolute;
+	top: -200px;
+	font-size: 30px;			
+}
+.FirstBall{
+	left: 0;
+	color: #ADD8E6;
+	animation: popBall 2s ease-in-out infinite .20s;
+}
+.secandBall{
+	left: 40px;
+	color: #ff6666;
+	animation: popBall 2s ease-in-out infinite .1s;
+}
+.thiredBall{
+	left: 80px;
+	color: #72bcd4;
+	animation: popBall 2s ease-in-out infinite .16s;
+}
+.fourthBall{
+	left: 120px;
+	color: yellow;
+	animation: popBall 2s ease-in-out infinite;
+}
+.fifthball{
+	left: 160px;
+	color: green;
+	animation: popBall 2s ease-in-out infinite .14s;
+}
+
+.sixthBall{
+	left: 200px;
+	color: purple;
+	animation: popBall 2s ease-in-out infinite .07s;
+}
+@keyframes popBall {
+	0%   {  top:-1000px;}
+  	25%  {  top:300px;}
+  	50%  { top:240px;}
+  	75%  { top:270px;}
+  	85%  { top:300px;}
+  	100% {  top:-100px;}
+}
+/******  End Ball animation  *******/
+
+/******  playState animation  *******/
+
+.playState{
+	width: 150%;
+	height: 200px;
+	text-align: center;	
+	font-size: 35px;
+}
+.playState p{	
+	color: #fff;		
+	width: 80%;
+}
+.playState h2{
+	color: gray;
+
+}
+.playState p:first-of-type{
+	border-radius: 10px;
+	padding: 14px;
+	background-color: lightblue;
+}
+.playState p:last-of-type{
+	border-radius: 10px;
+	padding: 14px;
+	background-color: red;
+}
+.playState:hover p:first-of-type{
+	animation:  playState .9s ease-in-out forwards;
+}
+.playState:hover p:last-of-type{
+	animation:  playState .9s ease-in-out;
+}
+@keyframes playState {
+	100% { transform: scale(1.3); }
+}
+/******  End playState animation  *******/
+
